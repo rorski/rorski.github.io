@@ -27,7 +27,12 @@
       </header>
       <section>
 
-      {{ content }}
+      {% for post in site.posts %}
+        <h3>{{ post.title }}</h3>
+        <h5>{{ post.date | date: "%-d %B %Y" }}</h5>
+        {{ post.content }}
+        <hr />
+      {% endfor %}
 
       </section>
       <footer>
