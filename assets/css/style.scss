@@ -1,0 +1,16 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.wrapper {
+  width: 970px;
+  margin: 0 auto; }
+
+section {
+  width: 690px;
+  float: right;
+  padding-bottom: 50px;
+  border-left: 1px solid #EEE;
+  padding-left: 20px;
+}
