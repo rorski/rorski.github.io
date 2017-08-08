@@ -15,7 +15,7 @@ The key bit here is the FilterModule, which must return the filter name in a "fi
 ~/ansible/filter_plugins/camelize.py
 ```
 The filter itself:
-```
+{% highlight python %}
 import re
 
 class FilterModule(object):
@@ -35,7 +35,8 @@ class FilterModule(object):
             return re.sub(r"(?:^|[_-]+)(.)", lambda m: m.group(1).upper(), s)
         else:
             return s[0].lower() + self.camelize(s)[1:]
-```
+{% endhighlight %}
+
 Now if you had some variable like 'my-var_with_underscores', you could camel case it by passing in this filter. It would be written as 'myVarWithUnderscores'.
 
 Also see [this helpful blog post][filter_blogpost] for some more on this.
