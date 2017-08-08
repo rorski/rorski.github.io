@@ -2,7 +2,7 @@
 layout: post
 title:  "Getting content and file names from a fileglob with Ansible"
 date:   2017-07-31 08:00:56 -0700
-categories: jekyll
+categories: ansible
 ---
 
 I recently had a use case for [Ansible][ansible] loops that seemed obvious, but wasn't particularly well documented or straightforward. Say you had a bunch of files that you needed to loop over, read the contents, and spit that into another template along with each file's name. In my case, this was necessary for building a [Cloudformation][cf] template from another git repository that had YAML files in it defining various AWS roles and policies.
